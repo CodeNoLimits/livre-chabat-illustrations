@@ -90,7 +90,7 @@ const SUJET='livre-chabat-4728c4d9f93cea9ad56a',NTFY='https://ntfy.sh/'+SUJET;
 const rem=document.getElementById('rem'),etat=document.getElementById('remetat'),btnv=document.getElementById('btnvocal');
 let courant=null,rec=null,morceaux=[],audio=null;
 function ouvrir(p,mode){courant=p;audio=null;morceaux=[];document.getElementById('remtitre').textContent='Page '+p.page+' — '+p.titre;
- document.getElementById('remtexte').value='';etat.textContent='';btnv.textContent='🎙️ Enregistrer un vocal';btnv.classList.remove('enreg');rem.showModal();if(mode==='vocal')basculer();}
+ document.getElementById('remtexte').value='';etat.textContent='';document.getElementById('btnenvoyer').disabled=false;btnv.textContent='🎙️ Enregistrer un vocal';btnv.classList.remove('enreg');rem.showModal();if(mode==='vocal')basculer();}
 document.getElementById('btnannuler').onclick=()=>{if(rec&&rec.state==='recording')rec.stop();rem.close()};
 btnv.onclick=basculer;
 async function basculer(){
@@ -103,14 +103,15 @@ async function basculer(){
  }catch(e){etat.textContent='Micro indisponible : écrivez votre remarque.'}}
 document.getElementById('btnenvoyer').onclick=async()=>{
  const texte=document.getElementById('remtexte').value.trim();if(!texte&&!audio){etat.textContent='Écrivez une remarque ou enregistrez un vocal.';return}
+ const bt=document.getElementById('btnenvoyer');if(bt.disabled)return;bt.disabled=true;
  const meta=JSON.stringify({page:courant.page,titre:courant.titre,fichier:courant.fichier,texte:texte,vocal:!!audio});
  etat.textContent='Envoi…';
  try{
   if(audio){const ext=(audio.type.includes('webm')?'webm':audio.type.includes('ogg')?'ogg':'m4a');
    await fetch(NTFY,{method:'PUT',body:audio,headers:{'Filename':'page'+courant.page+'.'+ext,'Message':encodeURIComponent(meta),'Title':'remarque'}})}
   else{await fetch(NTFY,{method:'POST',body:meta,headers:{'Title':'remarque'}})}
-  etat.textContent='✅ Merci, remarque bien reçue.';setTimeout(()=>{rem.close();remarques()},1200);
- }catch(e){etat.textContent='Échec de l\'envoi, réessayez.'}};
+  etat.textContent='✅ Merci, remarque bien reçue.';setTimeout(()=>{rem.close();bt.disabled=false;remarques()},1200);
+ }catch(e){etat.textContent='Échec de l\'envoi, réessayez.';bt.disabled=false}};
 async function remarques(){try{
  const r=await fetch(NTFY+'/json?poll=1&since=all',{cache:'no-store'});const t=await r.text();
  for(const l of t.trim().split('\n')){if(!l)continue;const m=JSON.parse(l);if(m.event!=='message')continue;
