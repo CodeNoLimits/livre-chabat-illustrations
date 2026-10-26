@@ -1,6 +1,6 @@
 {
  "total": 77,
- "maj": "26/10 à 17:55",
+ "maj": "26/10 à 19:37",
  "pages": [
   {
    "page": 10,
@@ -45,6 +45,12 @@
    "v": 1793028080
   },
   {
+   "page": 19,
+   "titre": "Le tailleur et le poisson du gouverneur",
+   "fichier": "page19.jpg",
+   "v": 1793035978
+  },
+  {
    "page": 27,
    "titre": "Les courses avant Shabbat : L’expédition chez les commerçants",
    "fichier": "page27.jpg",
@@ -67,6 +73,12 @@
    "titre": "Le vendredi soir : En route pour la synagogue",
    "fichier": "page38.jpg",
    "v": 1793028080
+  },
+  {
+   "page": 68,
+   "titre": "L’ambiance festive et les bonbons",
+   "fichier": "page68.jpg",
+   "v": 1793035906
   }
  ]
 }
