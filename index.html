@@ -34,6 +34,17 @@ dialog{border:0;padding:0;background:transparent;max-width:min(92vw,820px)}
 dialog::backdrop{background:rgba(20,14,10,.82)}
 dialog img{width:100%;height:auto;max-height:86vh;object-fit:contain;border-radius:10px;display:block}
 dialog p{color:#f3ead9;text-align:center;font-family:Fraunces,Georgia,serif;margin:10px 0 0}
+.actions{display:flex;gap:8px;margin-top:10px}
+.actions button{flex:1;border:1px solid var(--ligne);background:transparent;color:var(--encre);border-radius:10px;padding:9px 6px;font:500 14px Inter,system-ui,sans-serif;cursor:pointer}
+.actions button:active{transform:scale(.98)}
+.remarques{margin-top:8px;font-size:13px;color:var(--doux)}
+.remarques div{border-left:3px solid var(--or);padding:2px 0 2px 8px;margin-top:6px}
+#rem{border:0;border-radius:16px;padding:20px;background:var(--carte);color:var(--encre);width:min(92vw,460px)}
+#rem textarea{width:100%;min-height:110px;border:1px solid var(--ligne);border-radius:10px;padding:10px;font:15px Inter,system-ui,sans-serif;background:var(--fond);color:var(--encre)}
+#rem .ligne{display:flex;gap:8px;margin-top:12px}#rem .ligne button{flex:1;border:0;border-radius:10px;padding:12px;font:600 15px Inter,system-ui,sans-serif;cursor:pointer}
+.principal{background:var(--or);color:#fff}.second{background:var(--ligne);color:var(--encre)}
+.enreg{background:#b3261e!important;color:#fff!important}
+#remtitre{font-family:Fraunces,Georgia,serif;font-size:20px;margin:0 0 10px}#remetat{font-size:14px;color:var(--doux);margin-top:10px;min-height:20px}
 footer{text-align:center;color:var(--doux);font-size:13px;padding:0 16px 40px}
 </style>
 </head>
@@ -46,12 +57,18 @@ footer{text-align:center;color:var(--doux);font-size:13px;padding:0 16px 40px}
 </header>
 <main id="grille"><p class="vide">Chargement…</p></main>
 <dialog id="zoom"><img id="zimg" alt=""><p id="ztxt"></p></dialog>
-<footer>Touchez une image pour l'agrandir.</footer>
+<dialog id="rem"><p id="remtitre"></p>
+<textarea id="remtexte" placeholder="Votre remarque sur cette image…"></textarea>
+<div class="ligne"><button class="second" id="btnvocal">🎙️ Enregistrer un vocal</button></div>
+<div class="ligne"><button class="second" id="btnannuler">Annuler</button><button class="principal" id="btnenvoyer">Envoyer</button></div>
+<div id="remetat"></div></dialog>
+<footer>Touchez une image pour l'agrandir. Sous chaque image : écrivez une remarque ou enregistrez un vocal, elle arrive directement à l'atelier.</footer>
 <script>
 const g=document.getElementById('grille'),z=document.getElementById('zoom');
 z.addEventListener('click',()=>z.close());
 let vu=new Set(JSON.parse(sessionStorage.getItem('vu')||'[]'));
 async function charger(){
+ const deja=document.querySelector('dialog[open]');if(deja)return;
  try{
   const r=await fetch('manifest.json?t='+Date.now(),{cache:'no-store'});const m=await r.json();
   document.getElementById('compte').textContent=m.pages.length+' / '+m.total+' pages illustrées';
@@ -61,13 +78,48 @@ async function charger(){
   if(!m.pages.length){g.innerHTML='<p class="vide">Les premières pages arrivent.</p>';return}
   for(const p of m.pages){
    const f=document.createElement('figure');const neuf=!vu.has(p.fichier)&&vu.size>0;
-   f.innerHTML=`<img loading="lazy" src="img/${p.fichier}?v=${p.v}" alt="Page ${p.page} : ${p.titre}"><figcaption><div class="num">PAGE ${p.page}${neuf?'<span class="nouveau">● nouvelle</span>':''}</div><div class="titre">${p.titre}</div></figcaption>`;
-   f.onclick=()=>{document.getElementById('zimg').src='img/'+p.fichier+'?v='+p.v;document.getElementById('ztxt').textContent='Page '+p.page+' — '+p.titre;z.showModal()};
+   f.innerHTML=`<img loading="lazy" src="img/${p.fichier}?v=${p.v}" alt="Page ${p.page} : ${p.titre}"><figcaption><div class="num">PAGE ${p.page}${neuf?'<span class="nouveau">● nouvelle</span>':''}</div><div class="titre">${p.titre}</div><div class="actions"><button data-a="ecrire">✍️ Remarque</button><button data-a="vocal">🎙️ Vocal</button></div><div class="remarques" id="r${p.page}"></div></figcaption>`;
+   f.querySelectorAll('.actions button').forEach(b=>b.onclick=e=>{e.stopPropagation();ouvrir(p,b.dataset.a)});
+   f.querySelector('img').onclick=()=>{document.getElementById('zimg').src='img/'+p.fichier+'?v='+p.v;document.getElementById('ztxt').textContent='Page '+p.page+' — '+p.titre;z.showModal()};
    g.appendChild(f)}
   m.pages.forEach(p=>vu.add(p.fichier));try{sessionStorage.setItem('vu',JSON.stringify([...vu]))}catch(e){}
  }catch(e){}
 }
-charger();setInterval(charger,60000);
+
+const SUJET='livre-chabat-4728c4d9f93cea9ad56a',NTFY='https://ntfy.sh/'+SUJET;
+const rem=document.getElementById('rem'),etat=document.getElementById('remetat'),btnv=document.getElementById('btnvocal');
+let courant=null,rec=null,morceaux=[],audio=null;
+function ouvrir(p,mode){courant=p;audio=null;morceaux=[];document.getElementById('remtitre').textContent='Page '+p.page+' — '+p.titre;
+ document.getElementById('remtexte').value='';etat.textContent='';btnv.textContent='🎙️ Enregistrer un vocal';btnv.classList.remove('enreg');rem.showModal();if(mode==='vocal')basculer();}
+document.getElementById('btnannuler').onclick=()=>{if(rec&&rec.state==='recording')rec.stop();rem.close()};
+btnv.onclick=basculer;
+async function basculer(){
+ if(rec&&rec.state==='recording'){rec.stop();return}
+ try{const flux=await navigator.mediaDevices.getUserMedia({audio:true});
+  rec=new MediaRecorder(flux);morceaux=[];rec.ondataavailable=e=>morceaux.push(e.data);
+  rec.onstop=()=>{flux.getTracks().forEach(t=>t.stop());audio=new Blob(morceaux,{type:rec.mimeType||'audio/mp4'});
+   btnv.textContent='🎙️ Vocal enregistré ('+Math.round(audio.size/1024)+' Ko) — réenregistrer';btnv.classList.remove('enreg');etat.textContent='Appuyez sur Envoyer.'};
+  rec.start();btnv.textContent='⏹ Arrêter l\'enregistrement';btnv.classList.add('enreg');etat.textContent='Enregistrement en cours… parlez.';
+ }catch(e){etat.textContent='Micro indisponible : écrivez votre remarque.'}}
+document.getElementById('btnenvoyer').onclick=async()=>{
+ const texte=document.getElementById('remtexte').value.trim();if(!texte&&!audio){etat.textContent='Écrivez une remarque ou enregistrez un vocal.';return}
+ const meta=JSON.stringify({page:courant.page,titre:courant.titre,fichier:courant.fichier,texte:texte,vocal:!!audio});
+ etat.textContent='Envoi…';
+ try{
+  if(audio){const ext=(audio.type.includes('webm')?'webm':audio.type.includes('ogg')?'ogg':'m4a');
+   await fetch(NTFY,{method:'PUT',body:audio,headers:{'Filename':'page'+courant.page+'.'+ext,'Message':encodeURIComponent(meta),'Title':'remarque'}})}
+  else{await fetch(NTFY,{method:'POST',body:meta,headers:{'Title':'remarque'}})}
+  etat.textContent='✅ Merci, remarque bien reçue.';setTimeout(()=>{rem.close();remarques()},1200);
+ }catch(e){etat.textContent='Échec de l\'envoi, réessayez.'}};
+async function remarques(){try{
+ const r=await fetch(NTFY+'/json?poll=1&since=all',{cache:'no-store'});const t=await r.text();
+ for(const l of t.trim().split('\n')){if(!l)continue;const m=JSON.parse(l);if(m.event!=='message')continue;
+  let d;try{d=JSON.parse(m.attachment?decodeURIComponent(m.message):m.message)}catch(e){continue}
+  const box=document.getElementById('r'+d.page);if(!box||box.querySelector('[data-id="'+m.id+'"]'))continue;
+  const el=document.createElement('div');el.dataset.id=m.id;el.textContent=(d.vocal?'🎙️ vocal envoyé':'')+(d.vocal&&d.texte?' · ':'')+(d.texte||'');box.appendChild(el)}
+}catch(e){}}
+
+charger().then(remarques);setInterval(()=>charger().then(remarques),60000);
 </script>
 </body>
 </html>
