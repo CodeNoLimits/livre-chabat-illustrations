@@ -1,6 +1,6 @@
 {
  "total": 77,
- "maj": "27/10 à 13:05",
+ "maj": "27/10 à 13:10",
  "pages": [
   {
    "page": 3,
@@ -109,6 +109,12 @@
    "titre": "Interdit d’allumer le feu ou de souffler sur les bougies",
    "fichier": "page20.jpg",
    "v": 1793091027
+  },
+  {
+   "page": 21,
+   "titre": "Créer une étincelle : Allumer une lumière, un écran, ou utiliser un smartphone est interdit",
+   "fichier": "page21.jpg",
+   "v": 1793099298
   },
   {
    "page": 22,
