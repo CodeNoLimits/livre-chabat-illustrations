@@ -1,6 +1,6 @@
 {
  "total": 77,
- "maj": "27/10 à 17:44",
+ "maj": "27/10 à 17:45",
  "pages": [
   {
    "page": 3,
@@ -217,6 +217,12 @@
    "titre": "La reine qui revient",
    "fichier": "page50.jpg",
    "v": 1793115000
+  },
+  {
+   "page": 52,
+   "titre": "Les deux anges",
+   "fichier": "page52.jpg",
+   "v": 1793115781
   },
   {
    "page": 53,
