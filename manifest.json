@@ -1,7 +1,13 @@
 {
  "total": 77,
- "maj": "27/10 à 11:40",
+ "maj": "27/10 à 12:36",
  "pages": [
+  {
+   "page": 3,
+   "titre": "La manne en double",
+   "fichier": "page03.jpg",
+   "v": 1793095672
+  },
   {
    "page": 4,
    "titre": "Le Sambatyon",
@@ -45,6 +51,12 @@
    "v": 1793029714
   },
   {
+   "page": 12,
+   "titre": "Madame ‘Hanina",
+   "fichier": "page12.jpg",
+   "v": 1793094930
+  },
+  {
    "page": 14,
    "titre": "Le calme de Hillel",
    "fichier": "page14.jpg",
@@ -85,6 +97,12 @@
    "titre": "Interdit de jardiner ou de cueillir une pomme sur un arbre",
    "fichier": "page22.jpg",
    "v": 1793061245
+  },
+  {
+   "page": 25,
+   "titre": "Interdit de porter des objets (un sac, des clés, un jouet) dans la rue ou les endroits",
+   "fichier": "page25.jpg",
+   "v": 1793095809
   },
   {
    "page": 33,
