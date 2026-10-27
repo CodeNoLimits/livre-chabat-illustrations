@@ -1,6 +1,6 @@
 {
  "total": 77,
- "maj": "27/10 à 10:55",
+ "maj": "27/10 à 11:40",
  "pages": [
   {
    "page": 4,
@@ -111,10 +111,28 @@
    "v": 1793088210
   },
   {
+   "page": 53,
+   "titre": "L’âme en plus",
+   "fichier": "page53.jpg",
+   "v": 1793086873
+  },
+  {
+   "page": 54,
+   "titre": "KIDOUCH VENDREDI SOIR",
+   "fichier": "page54.jpg",
+   "v": 1793092692
+  },
+  {
    "page": 70,
    "titre": "Les chants qui réparent",
    "fichier": "page70.jpg",
    "v": 1793091219
+  },
+  {
+   "page": 78,
+   "titre": "Bar mitsva",
+   "fichier": "page78.jpg",
+   "v": 1793086681
   }
  ]
 }
