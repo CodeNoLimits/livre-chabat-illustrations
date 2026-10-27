@@ -1,6 +1,6 @@
 {
  "total": 77,
- "maj": "27/10 à 13:10",
+ "maj": "27/10 à 13:18",
  "pages": [
   {
    "page": 3,
@@ -127,6 +127,12 @@
    "titre": "Interdit de porter des objets (un sac, des clés, un jouet) dans la rue ou les endroits",
    "fichier": "page25.jpg",
    "v": 1793095809
+  },
+  {
+   "page": 26,
+   "titre": "La boutique du cordonnier",
+   "fichier": "page26.jpg",
+   "v": 1793099846
   },
   {
    "page": 33,
