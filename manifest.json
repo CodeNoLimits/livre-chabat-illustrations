@@ -1,6 +1,6 @@
 {
  "total": 77,
- "maj": "27/10 à 13:21",
+ "maj": "27/10 à 14:19",
  "pages": [
   {
    "page": 3,
@@ -139,6 +139,12 @@
    "titre": "La boutique du cordonnier",
    "fichier": "page26.jpg",
    "v": 1793099846
+  },
+  {
+   "page": 31,
+   "titre": "Faire les courses",
+   "fichier": "page31.jpg",
+   "v": 1793103451
   },
   {
    "page": 33,
