@@ -1,12 +1,24 @@
 {
  "total": 77,
- "maj": "27/10 à 09:16",
+ "maj": "27/10 à 09:38",
  "pages": [
   {
    "page": 4,
    "titre": "Le Sambatyon",
    "fichier": "page04.jpg",
-   "v": 1793085014
+   "v": 1793085134
+  },
+  {
+   "page": 5,
+   "titre": "La joie qu’on choisit",
+   "fichier": "page05.jpg",
+   "v": 1793085151
+  },
+  {
+   "page": 6,
+   "titre": "La table simple de Rabbi Akiva",
+   "fichier": "page06.jpg",
+   "v": 1793085465
   },
   {
    "page": 10,
@@ -30,13 +42,19 @@
    "page": 15,
    "titre": "Les bougies et le vinaigre",
    "fichier": "page15.jpg",
-   "v": 1793061053
+   "v": 1793086723
   },
   {
    "page": 16,
    "titre": "Rabbi Chimon et son fils",
    "fichier": "page16.jpg",
    "v": 1793028080
+  },
+  {
+   "page": 17,
+   "titre": "Le mystère des brioches du Ciel",
+   "fichier": "page17.jpg",
+   "v": 1793085689
   },
   {
    "page": 19,
