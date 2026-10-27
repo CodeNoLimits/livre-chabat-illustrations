@@ -1,12 +1,12 @@
 {
  "total": 77,
- "maj": "27/10 à 09:38",
+ "maj": "27/10 à 10:50",
  "pages": [
   {
    "page": 4,
    "titre": "Le Sambatyon",
    "fichier": "page04.jpg",
-   "v": 1793085134
+   "v": 1793086699
   },
   {
    "page": 5,
@@ -18,7 +18,19 @@
    "page": 6,
    "titre": "La table simple de Rabbi Akiva",
    "fichier": "page06.jpg",
-   "v": 1793085465
+   "v": 1793091027
+  },
+  {
+   "page": 7,
+   "titre": "Le Baal Shem Tov dans la forêt",
+   "fichier": "page07.jpg",
+   "v": 1793086117
+  },
+  {
+   "page": 8,
+   "titre": "Le défenseur de Berditchev",
+   "fichier": "page08.jpg",
+   "v": 1793086516
   },
   {
    "page": 10,
@@ -42,7 +54,7 @@
    "page": 15,
    "titre": "Les bougies et le vinaigre",
    "fichier": "page15.jpg",
-   "v": 1793086723
+   "v": 1793086687
   },
   {
    "page": 16,
@@ -66,7 +78,7 @@
    "page": 20,
    "titre": "Interdit d’allumer le feu ou de souffler sur les bougies",
    "fichier": "page20.jpg",
-   "v": 1793036596
+   "v": 1793091027
   },
   {
    "page": 22,
@@ -81,10 +93,28 @@
    "v": 1793028080
   },
   {
+   "page": 36,
+   "titre": "Les collines de Safed",
+   "fichier": "page36.jpg",
+   "v": 1793087807
+  },
+  {
+   "page": 38,
+   "titre": "Le vendredi soir : En route pour la synagogue",
+   "fichier": "page38.jpg",
+   "v": 1793087719
+  },
+  {
+   "page": 49,
+   "titre": "Le poisson du vendredi",
+   "fichier": "page49.jpg",
+   "v": 1793088210
+  },
+  {
    "page": 70,
    "titre": "Les chants qui réparent",
    "fichier": "page70.jpg",
-   "v": 1793061321
+   "v": 1793091027
   }
  ]
 }
