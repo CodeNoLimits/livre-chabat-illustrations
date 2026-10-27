@@ -1,6 +1,6 @@
 {
  "total": 77,
- "maj": "27/10 à 13:18",
+ "maj": "27/10 à 13:21",
  "pages": [
   {
    "page": 3,
@@ -121,6 +121,12 @@
    "titre": "Interdit de jardiner ou de cueillir une pomme sur un arbre",
    "fichier": "page22.jpg",
    "v": 1793061245
+  },
+  {
+   "page": 24,
+   "titre": "Interdit de dessiner, d'écrire ses devoirs ou de gommer",
+   "fichier": "page24.jpg",
+   "v": 1793099965
   },
   {
    "page": 25,
