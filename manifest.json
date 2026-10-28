@@ -1,6 +1,6 @@
 {
  "total": 77,
- "maj": "27/10 à 22:54",
+ "maj": "28/10 à 03:46",
  "pages": [
   {
    "page": 3,
@@ -123,6 +123,12 @@
    "v": 1793061245
   },
   {
+   "page": 23,
+   "titre": "Interdit de réparer un vêtement ou de déchirer du tissu",
+   "fichier": "page23.jpg",
+   "v": 1793151988
+  },
+  {
    "page": 24,
    "titre": "Interdit de dessiner, d'écrire ses devoirs ou de gommer",
    "fichier": "page24.jpg",
@@ -243,6 +249,12 @@
    "v": 1793118944
   },
   {
+   "page": 56,
+   "titre": "Les hallot",
+   "fichier": "page56.jpg",
+   "v": 1793151988
+  },
+  {
    "page": 62,
    "titre": "Le Sefer Torah levé",
    "fichier": "page62.jpg",
@@ -252,7 +264,7 @@
    "page": 68,
    "titre": "L’ambiance festive et les bonbons",
    "fichier": "page68.jpg",
-   "v": 1793130432
+   "v": 1793151988
   },
   {
    "page": 70,
@@ -265,6 +277,12 @@
    "titre": "Feu, vin, épices HAVDALA",
    "fichier": "page74.jpg",
    "v": 1793134113
+  },
+  {
+   "page": 76,
+   "titre": "La dernière danse MELAVE MALKA",
+   "fichier": "page76.jpg",
+   "v": 1793151988
   },
   {
    "page": 78,
