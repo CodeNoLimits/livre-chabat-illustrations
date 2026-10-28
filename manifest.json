@@ -1,6 +1,6 @@
 {
  "total": 77,
- "maj": "28/10 à 03:46",
+ "maj": "28/10 à 08:01",
  "pages": [
   {
    "page": 3,
@@ -253,6 +253,12 @@
    "titre": "Les hallot",
    "fichier": "page56.jpg",
    "v": 1793151988
+  },
+  {
+   "page": 58,
+   "titre": "L'épice invisible de l'empereur Antonin",
+   "fichier": "page58.jpg",
+   "v": 1793151750
   },
   {
    "page": 62,
