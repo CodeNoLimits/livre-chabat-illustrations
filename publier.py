@@ -21,10 +21,14 @@ for src in sorted(LIV.glob("page*.png")):
 maj = datetime.datetime.now().strftime("%d/%m à %H:%M")
 man = {"total": TOTAL, "maj": maj, "pages": sorted(pages, key=lambda p: p["page"])}
 ancien = json.loads((ICI / "manifest.json").read_text()) if (ICI / "manifest.json").exists() else {}
-if ancien.get("pages") == man["pages"]:
-    print("rien de nouveau"); raise SystemExit
-(ICI / "manifest.json").write_text(json.dumps(man, ensure_ascii=False, indent=1))
 g = lambda *a: subprocess.run(["git", "-C", str(ICI), *a], capture_output=True, text=True)
+if ancien.get("pages") == man["pages"]:
+    # un push raté (28/10 14:38) laissait le commit en local pour toujours : on le repousse
+    if "ahead" in g("status", "-sb").stdout.splitlines()[0]:
+        p = g("push", "-q", "origin", "HEAD:main"); print("repoussé" if p.returncode == 0 else f"ÉCHEC push : {p.stderr[:200]}")
+    else: print("rien de nouveau")
+    raise SystemExit
+(ICI / "manifest.json").write_text(json.dumps(man, ensure_ascii=False, indent=1))
 g("add", "-A"); r = g("commit", "-m", f"Pages illustrées : {len(pages)}/{TOTAL} ({maj})")
 p = g("push", "-q", "origin", "HEAD:main")
 print(f"{len(pages)}/{TOTAL} pages publiées", "(poussé)" if p.returncode == 0 else f"ÉCHEC push : {p.stderr[:200]}")
