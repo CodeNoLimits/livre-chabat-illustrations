@@ -1,6 +1,6 @@
 {
  "total": 77,
- "maj": "28/10 à 15:17",
+ "maj": "28/10 à 21:33",
  "pages": [
   {
    "page": 3,
@@ -283,6 +283,18 @@
    "titre": "Les chants qui réparent",
    "fichier": "page70.jpg",
    "v": 1793120440
+  },
+  {
+   "page": 72,
+   "titre": "Le troisième repas",
+   "fichier": "page72.jpg",
+   "v": 1793211418
+  },
+  {
+   "page": 73,
+   "titre": "La miette",
+   "fichier": "page73.jpg",
+   "v": 1793214193
   },
   {
    "page": 74,

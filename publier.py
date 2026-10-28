@@ -22,13 +22,22 @@ maj = datetime.datetime.now().strftime("%d/%m à %H:%M")
 man = {"total": TOTAL, "maj": maj, "pages": sorted(pages, key=lambda p: p["page"])}
 ancien = json.loads((ICI / "manifest.json").read_text()) if (ICI / "manifest.json").exists() else {}
 g = lambda *a: subprocess.run(["git", "-C", str(ICI), *a], capture_output=True, text=True)
+def pousser():
+    p = g("push", "-q", "origin", "HEAD:main")
+    if p.returncode != 0 and "resolve" in p.stderr.lower():  # DNS du Mac en panne (28/10) : on résout github.com par 1.1.1.1 pour cette seule commande
+        try:
+            r = subprocess.run(["curl", "-s", "-m", "15", "-H", "accept: application/dns-json", "https://1.1.1.1/dns-query?name=github.com&type=A"], capture_output=True, text=True)
+            ip = [a["data"] for a in json.loads(r.stdout)["Answer"] if a["type"] == 1][0]
+            p = g("-c", f"http.curloptResolve=github.com:443:{ip}", "push", "-q", "origin", "HEAD:main")
+        except Exception: pass
+    return p
 if ancien.get("pages") == man["pages"]:
     # un push raté (28/10 14:38) laissait le commit en local pour toujours : on le repousse
     if "ahead" in g("status", "-sb").stdout.splitlines()[0]:
-        p = g("push", "-q", "origin", "HEAD:main"); print("repoussé" if p.returncode == 0 else f"ÉCHEC push : {p.stderr[:200]}")
+        p = pousser(); print("repoussé" if p.returncode == 0 else f"ÉCHEC push : {p.stderr[:200]}")
     else: print("rien de nouveau")
     raise SystemExit
 (ICI / "manifest.json").write_text(json.dumps(man, ensure_ascii=False, indent=1))
 g("add", "-A"); r = g("commit", "-m", f"Pages illustrées : {len(pages)}/{TOTAL} ({maj})")
-p = g("push", "-q", "origin", "HEAD:main")
+p = pousser()
 print(f"{len(pages)}/{TOTAL} pages publiées", "(poussé)" if p.returncode == 0 else f"ÉCHEC push : {p.stderr[:200]}")
