@@ -1,6 +1,6 @@
 {
  "total": 77,
- "maj": "02/11 à 15:14",
+ "maj": "02/11 à 15:19",
  "pages": [
   {
    "page": 3,
@@ -345,6 +345,12 @@
    "v": 1793625250
   },
   {
+   "page": 60,
+   "titre": "Kiddoush MATIN",
+   "fichier": "page60.jpg",
+   "v": 1793625540
+  },
+  {
    "page": 61,
    "titre": "La lecture du Sefer Torah",
    "fichier": "page61.jpg",
@@ -379,6 +385,12 @@
    "titre": "La lampe qui veille",
    "fichier": "page66.jpg",
    "v": 1793625254
+  },
+  {
+   "page": 67,
+   "titre": "Quand toute la salle dit Amen",
+   "fichier": "page67.jpg",
+   "v": 1793625541
   },
   {
    "page": 68,
