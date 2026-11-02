@@ -1,6 +1,6 @@
 {
  "total": 77,
- "maj": "02/11 à 15:19",
+ "maj": "02/11 à 15:30",
  "pages": [
   {
    "page": 3,
@@ -433,6 +433,12 @@
    "titre": "Feu, vin, épices HAVDALA",
    "fichier": "page74.jpg",
    "v": 1793134113
+  },
+  {
+   "page": 75,
+   "titre": "Le parfum du jardin",
+   "fichier": "page75.jpg",
+   "v": 1793626218
   },
   {
    "page": 76,
