@@ -1,6 +1,6 @@
 {
  "total": 77,
- "maj": "28/10 à 21:33",
+ "maj": "02/11 à 15:02",
  "pages": [
   {
    "page": 3,
@@ -147,6 +147,24 @@
    "v": 1793193459
   },
   {
+   "page": 27,
+   "titre": "Les courses avant Shabbat : L’expédition chez les commerçants",
+   "fichier": "page27.jpg",
+   "v": 1793624577
+  },
+  {
+   "page": 28,
+   "titre": "Le marché se vide",
+   "fichier": "page28.jpg",
+   "v": 1793624576
+  },
+  {
+   "page": 29,
+   "titre": "Hillel  garde le meilleur",
+   "fichier": "page29.jpg",
+   "v": 1793624576
+  },
+  {
    "page": 30,
    "titre": "Le dernier poisson du port",
    "fichier": "page30.jpg",
@@ -169,6 +187,12 @@
    "titre": "Préparer la maison",
    "fichier": "page33.jpg",
    "v": 1793119705
+  },
+  {
+   "page": 34,
+   "titre": "Préparer les repas et les ‘halot",
+   "fichier": "page34.jpg",
+   "v": 1793624577
   },
   {
    "page": 35,
@@ -219,6 +243,30 @@
    "v": 1793111789
   },
   {
+   "page": 44,
+   "titre": "Autour de la table, Chalom Alekhem",
+   "fichier": "page44.jpg",
+   "v": 1793624576
+  },
+  {
+   "page": 45,
+   "titre": "Echet ‘Hayil pour maman",
+   "fichier": "page45.jpg",
+   "v": 1793624577
+  },
+  {
+   "page": 46,
+   "titre": "Le kidouch",
+   "fichier": "page46.jpg",
+   "v": 1793624578
+  },
+  {
+   "page": 48,
+   "titre": "Le samedi midi",
+   "fichier": "page48.jpg",
+   "v": 1793624577
+  },
+  {
    "page": 49,
    "titre": "Le poisson du vendredi",
    "fichier": "page49.jpg",
@@ -259,6 +307,12 @@
    "titre": "Les hallot",
    "fichier": "page56.jpg",
    "v": 1793151988
+  },
+  {
+   "page": 57,
+   "titre": "Le repas",
+   "fichier": "page57.jpg",
+   "v": 1793624578
   },
   {
    "page": 58,
@@ -307,6 +361,12 @@
    "titre": "La dernière danse MELAVE MALKA",
    "fichier": "page76.jpg",
    "v": 1793151988
+  },
+  {
+   "page": 77,
+   "titre": "Le samedi matin à la synagogue : L’apparition du « monsieur aux bonbons »",
+   "fichier": "page77.jpg",
+   "v": 1793624577
   },
   {
    "page": 78,
