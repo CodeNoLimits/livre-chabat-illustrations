@@ -1,6 +1,6 @@
 {
  "total": 77,
- "maj": "02/11 à 15:34",
+ "maj": "04/11 à 15:21",
  "pages": [
   {
    "page": 3,
@@ -240,7 +240,7 @@
    "page": 42,
    "titre": "L'arbitrage forcé des deux anges",
    "fichier": "page42.jpg",
-   "v": 1793625252
+   "v": 1793798511
   },
   {
    "page": 43,
@@ -336,7 +336,7 @@
    "page": 58,
    "titre": "L'épice invisible de l'empereur Antonin",
    "fichier": "page58.jpg",
-   "v": 1793151750
+   "v": 1793798511
   },
   {
    "page": 59,
@@ -354,7 +354,7 @@
    "page": 61,
    "titre": "La lecture du Sefer Torah",
    "fichier": "page61.jpg",
-   "v": 1793625254
+   "v": 1793798511
   },
   {
    "page": 62,
@@ -366,7 +366,7 @@
    "page": 63,
    "titre": "L’aliya de grand-père",
    "fichier": "page63.jpg",
-   "v": 1793625254
+   "v": 1793798511
   },
   {
    "page": 64,
@@ -384,13 +384,13 @@
    "page": 66,
    "titre": "La lampe qui veille",
    "fichier": "page66.jpg",
-   "v": 1793626475
+   "v": 1793798511
   },
   {
    "page": 67,
    "titre": "Quand toute la salle dit Amen",
    "fichier": "page67.jpg",
-   "v": 1793625541
+   "v": 1793798511
   },
   {
    "page": 68,
@@ -462,7 +462,7 @@
    "page": 79,
    "titre": "À vendredi PROCHAIN",
    "fichier": "page79.jpg",
-   "v": 1793625251
+   "v": 1793798511
   }
  ]
 }
