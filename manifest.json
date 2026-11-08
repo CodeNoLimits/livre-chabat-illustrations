@@ -3,10 +3,40 @@
  "maj": "08/11 à 22:32",
  "pages": [
   {
+   "page": 3,
+   "titre": "La manne en double",
+   "fichier": "page03.jpg",
+   "v": 1793095672
+  },
+  {
    "page": 4,
    "titre": "Le Sambatyon",
    "fichier": "page04.jpg",
    "v": 1793086699
+  },
+  {
+   "page": 5,
+   "titre": "La joie qu’on choisit",
+   "fichier": "page05.jpg",
+   "v": 1793091338
+  },
+  {
+   "page": 6,
+   "titre": "La table simple de Rabbi Akiva",
+   "fichier": "page06.jpg",
+   "v": 1793091027
+  },
+  {
+   "page": 7,
+   "titre": "Le Baal Shem Tov dans la forêt",
+   "fichier": "page07.jpg",
+   "v": 1793086117
+  },
+  {
+   "page": 8,
+   "titre": "Le défenseur de Berditchev",
+   "fichier": "page08.jpg",
+   "v": 1793119916
   },
   {
    "page": 9,
@@ -15,16 +45,94 @@
    "v": 1793193030
   },
   {
+   "page": 10,
+   "titre": "L'âne qui refusait de tricher",
+   "fichier": "page10.jpg",
+   "v": 1793028080
+  },
+  {
+   "page": 11,
+   "titre": "La vache rétive du fermier pieux",
+   "fichier": "page11.jpg",
+   "v": 1793029714
+  },
+  {
+   "page": 12,
+   "titre": "Madame ‘Hanina",
+   "fichier": "page12.jpg",
+   "v": 1793109712
+  },
+  {
    "page": 13,
    "titre": "Les villageois de Chelm et la neige immaculée",
    "fichier": "page13.jpg",
    "v": 1793193333
   },
   {
+   "page": 14,
+   "titre": "Le calme de Hillel",
+   "fichier": "page14.jpg",
+   "v": 1793119705
+  },
+  {
+   "page": 15,
+   "titre": "Les bougies et le vinaigre",
+   "fichier": "page15.jpg",
+   "v": 1793120945
+  },
+  {
+   "page": 16,
+   "titre": "Rabbi Chimon et son fils",
+   "fichier": "page16.jpg",
+   "v": 1793028080
+  },
+  {
+   "page": 17,
+   "titre": "Le mystère des brioches du Ciel",
+   "fichier": "page17.jpg",
+   "v": 1793120812
+  },
+  {
+   "page": 18,
+   "titre": "La carpe condamnée de Chelm",
+   "fichier": "page18.jpg",
+   "v": 1793115176
+  },
+  {
+   "page": 19,
+   "titre": "Le tailleur et le poisson du gouverneur",
+   "fichier": "page19.jpg",
+   "v": 1793119705
+  },
+  {
+   "page": 20,
+   "titre": "Interdit d’allumer le feu ou de souffler sur les bougies",
+   "fichier": "page20.jpg",
+   "v": 1793115209
+  },
+  {
+   "page": 21,
+   "titre": "Créer une étincelle : Allumer une lumière, un écran, ou utiliser un smartphone est interdit",
+   "fichier": "page21.jpg",
+   "v": 1793120192
+  },
+  {
+   "page": 22,
+   "titre": "Interdit de jardiner ou de cueillir une pomme sur un arbre",
+   "fichier": "page22.jpg",
+   "v": 1793061245
+  },
+  {
    "page": 23,
    "titre": "Interdit de réparer un vêtement ou de déchirer du tissu",
    "fichier": "page23.jpg",
    "v": 1793193030
+  },
+  {
+   "page": 24,
+   "titre": "Interdit de dessiner, d'écrire ses devoirs ou de gommer",
+   "fichier": "page24.jpg",
+   "v": 1793115277
   },
   {
    "page": 25,
@@ -57,10 +165,46 @@
    "v": 1793624576
   },
   {
+   "page": 30,
+   "titre": "Le dernier poisson du port",
+   "fichier": "page30.jpg",
+   "v": 1793188800
+  },
+  {
+   "page": 31,
+   "titre": "Faire les courses",
+   "fichier": "page31.jpg",
+   "v": 1793119705
+  },
+  {
+   "page": 32,
+   "titre": "Yossef et la perle dans le poisson",
+   "fichier": "page32.jpg",
+   "v": 1793103967
+  },
+  {
+   "page": 33,
+   "titre": "Préparer la maison",
+   "fichier": "page33.jpg",
+   "v": 1793119705
+  },
+  {
    "page": 34,
    "titre": "Préparer les repas et les ‘halot",
    "fichier": "page34.jpg",
    "v": 1793624577
+  },
+  {
+   "page": 35,
+   "titre": "Allumage des Bougies",
+   "fichier": "page35.jpg",
+   "v": 1793105366
+  },
+  {
+   "page": 36,
+   "titre": "Les collines de Safed",
+   "fichier": "page36.jpg",
+   "v": 1793115893
   },
   {
    "page": 37,
@@ -81,10 +225,28 @@
    "v": 1793106760
   },
   {
+   "page": 40,
+   "titre": "Lekha Dodi, viens mon bien-aimé",
+   "fichier": "page40.jpg",
+   "v": 1793119705
+  },
+  {
+   "page": 41,
+   "titre": "Le retour à la maison",
+   "fichier": "page41.jpg",
+   "v": 1793115176
+  },
+  {
    "page": 42,
    "titre": "L'arbitrage forcé des deux anges",
    "fichier": "page42.jpg",
    "v": 1793798511
+  },
+  {
+   "page": 43,
+   "titre": "Papa bénit les enfants",
+   "fichier": "page43.jpg",
+   "v": 1793111789
   },
   {
    "page": 44,
@@ -117,10 +279,52 @@
    "v": 1793624577
   },
   {
+   "page": 49,
+   "titre": "Le poisson du vendredi",
+   "fichier": "page49.jpg",
+   "v": 1793120412
+  },
+  {
+   "page": 50,
+   "titre": "La reine qui revient",
+   "fichier": "page50.jpg",
+   "v": 1793120643
+  },
+  {
    "page": 51,
    "titre": "Accompagner la reine : Melave Malka",
    "fichier": "page51.jpg",
    "v": 1793625253
+  },
+  {
+   "page": 52,
+   "titre": "Les deux anges",
+   "fichier": "page52.jpg",
+   "v": 1793118859
+  },
+  {
+   "page": 53,
+   "titre": "L’âme en plus",
+   "fichier": "page53.jpg",
+   "v": 1793118944
+  },
+  {
+   "page": 54,
+   "titre": "KIDOUCH VENDREDI SOIR",
+   "fichier": "page54.jpg",
+   "v": 1793120114
+  },
+  {
+   "page": 55,
+   "titre": "Les enfants servent",
+   "fichier": "page55.jpg",
+   "v": 1793118944
+  },
+  {
+   "page": 56,
+   "titre": "Les hallot",
+   "fichier": "page56.jpg",
+   "v": 1793151988
   },
   {
    "page": 57,
@@ -150,7 +354,13 @@
    "page": 61,
    "titre": "La lecture du Sefer Torah",
    "fichier": "page61.jpg",
-   "v": 1794169925
+   "v": 1794169938
+  },
+  {
+   "page": 62,
+   "titre": "Le Sefer Torah levé",
+   "fichier": "page62.jpg",
+   "v": 1793130104
   },
   {
    "page": 63,
@@ -183,10 +393,22 @@
    "v": 1793798511
   },
   {
+   "page": 68,
+   "titre": "L’ambiance festive et les bonbons",
+   "fichier": "page68.jpg",
+   "v": 1793151988
+  },
+  {
    "page": 69,
    "titre": "La chaise en plus",
    "fichier": "page69.jpg",
    "v": 1793625248
+  },
+  {
+   "page": 70,
+   "titre": "Les chants qui réparent",
+   "fichier": "page70.jpg",
+   "v": 1793120440
   },
   {
    "page": 71,
@@ -195,16 +417,46 @@
    "v": 1793625249
   },
   {
+   "page": 72,
+   "titre": "Le troisième repas",
+   "fichier": "page72.jpg",
+   "v": 1793211418
+  },
+  {
+   "page": 73,
+   "titre": "La miette",
+   "fichier": "page73.jpg",
+   "v": 1793214193
+  },
+  {
+   "page": 74,
+   "titre": "Feu, vin, épices HAVDALA",
+   "fichier": "page74.jpg",
+   "v": 1793134113
+  },
+  {
    "page": 75,
    "titre": "Le parfum du jardin",
    "fichier": "page75.jpg",
    "v": 1793626218
   },
   {
+   "page": 76,
+   "titre": "La dernière danse MELAVE MALKA",
+   "fichier": "page76.jpg",
+   "v": 1793151988
+  },
+  {
    "page": 77,
    "titre": "Le samedi matin à la synagogue : L’apparition du « monsieur aux bonbons »",
    "fichier": "page77.jpg",
    "v": 1793624577
+  },
+  {
+   "page": 78,
+   "titre": "Bar mitsva",
+   "fichier": "page78.jpg",
+   "v": 1793128620
   },
   {
    "page": 79,
