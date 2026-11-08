@@ -31,6 +31,8 @@ def pousser():
             p = g("-c", f"http.curloptResolve=github.com:443:{ip}", "push", "-q", "origin", "HEAD:main")
         except Exception: pass
     return p
+if len(man["pages"]) < len(ancien.get("pages", [])):  # 08/11 : LIVRAISON ne contient pas toutes les pages (35/77) → a vidé le site ; on refuse
+    raise SystemExit(f"REFUS : {len(man['pages'])} pages au lieu de {len(ancien['pages'])} en ligne, rien publié")
 if ancien.get("pages") == man["pages"]:
     # un push raté (28/10 14:38) laissait le commit en local pour toujours : on le repousse
     if "ahead" in g("status", "-sb").stdout.splitlines()[0]:
